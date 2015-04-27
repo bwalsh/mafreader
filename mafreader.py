@@ -10,7 +10,7 @@ import urllib.request
 # entry point to the command line app, prints markdown table of civic links
 # see https://pythonhosted.org/pyCLI/
 @cli.app.CommandLineApp
-def civic(app):
+def mafreader(app):
   try:
     read(
       app.params.input_file,
@@ -27,10 +27,10 @@ def civic(app):
 
     raise
 # command line parameters and defaults
-civic.add_param("-i", "--input_file", help="input file (assumed to be tab separated MAF format); defaults to stdin", default="-" )
-civic.add_param("-o", "--output_file", help="output file; defaults to stdout", default="-" )
-civic.add_param("-c", "--host", help="url of reference civic host (default: %(default)s)", default="civic.genome.wustl.edu"  )
-civic.add_param("-col", "--entrez_id_column", help="column in the input file that contains the entrez id. Defaults to 1 (0 based)", default=1,  type=int )
+mafreader.add_param("-i", "--input_file", help="input file (assumed to be tab separated MAF format); defaults to stdin", default="-" )
+mafreader.add_param("-o", "--output_file", help="output file; defaults to stdout", default="-" )
+mafreader.add_param("-c", "--host", help="url of reference civic host (default: %(default)s)", default="civic.genome.wustl.edu"  )
+mafreader.add_param("-col", "--entrez_id_column", help="column in the input file that contains the entrez id. Defaults to 1 (0 based)", default=1,  type=int )
  
 # entry point to the command line app, re-raises any exceptions
 def read(input_file,output_file, host,entrez_id_column):
@@ -124,7 +124,7 @@ def civic_lookup(entrez_id, host):
   return None
 
 if __name__ == '__main__':   
-  civic.run()
+  mafreader.run()
   # for testing
   # read("resources/simple.maf","-","civic.genome.wustl.edu",1)
 

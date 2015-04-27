@@ -1,9 +1,9 @@
 MAFReader Quickstart
 =================
 
-MAFReader is a simple command line tool that reads a `MAF <https://wiki.nci.nih.gov/display/TCGA/Mutation+Annotation+Format+%28MAF%29+Specification>`_ file, calls `CIViC <https://civic.genome.wustl.edu>`_ for each line therein.
+MAFReader is a simple command line tool that reads a [MAF](https://wiki.nci.nih.gov/display/TCGA/Mutation+Annotation+Format+%28MAF%29+Specification) file, calls [CIViC](https://civic.genome.wustl.edu) for each line therein.
 
-MAFReader outputs a table in `markdown <https://help.github.com/articles/github-flavored-markdown/#tables>`_ format for easy inclusion into downstream reports
+MAFReader outputs a table in [markdown](https://help.github.com/articles/github-flavored-markdown/#tables) format for easy inclusion into downstream reports
 
 MAFReader requires Python 3.*. To check your python version, run:
 
@@ -16,8 +16,8 @@ Usage:
 
 ```
 
-    $ python MAFReader.py -h
-    usage: civic [-h] [-i INPUT_FILE] [-o OUTPUT_FILE] [-c HOST]
+    $ python mafeader.py -h
+    usage: mafreader [-h] [-i INPUT_FILE] [-o OUTPUT_FILE] [-c HOST]
                  [-col ENTREZ_ID_COLUMN]
 
     optional arguments:
