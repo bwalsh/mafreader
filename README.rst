@@ -1,9 +1,9 @@
 mafreader Quickstart
 =================
 
-mafreader is a simple command line tool that reads a `MAF https://wiki.nci.nih.gov/display/TCGA/Mutation+Annotation+Format+%28MAF%29+Specification` file, calls `CIViC https://civic.genome.wustl.edu` for each line therein.
+mafreader is a simple command line tool that reads a `MAF https://wiki.nci.nih.gov/display/TCGA/Mutation+Annotation+Format+%28MAF%29+Specification`_ file, calls `CIViC https://civic.genome.wustl.edu`_ for each line therein.
 
-mafreader outputs a table in `markdown https://help.github.com/articles/github-flavored-markdown/#tables` format for easy inclusion into downstream reports
+mafreader outputs a table in `markdown https://help.github.com/articles/github-flavored-markdown/#tables`_ format for easy inclusion into downstream reports
 
 mafreader requires Python 3.*. To check your python version, run:
 
