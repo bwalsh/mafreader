@@ -52,10 +52,10 @@ Output
 ```
 $ python mafreader.py  -i resources/simple.maf
 ```
-| hugo_symbol  | entrez_gene_id  | variant  | drugs  | link  |
+| hugo_symbol  | entrez_gene_id  | CIViC variant name  | drugs  | link  |
 |---  |---  |---  |---  |---  |
-| 391  | 207  | E17K  |   | [civic variant](http://civic.genome.wustl.edu/#/events/genes/207/summary/variants/4/summary/evidence/8/summary)  |
-| 11998  | 7157  | R175H  |   | [civic variant](http://civic.genome.wustl.edu/#/events/genes/7157/summary/variants/120/summary/evidence/408/summary)  |
+| 391  | 207  | E17K  | MK-2206  | [civic variant](http://civic.genome.wustl.edu/#/events/genes/207/summary/variants/4/summary/evidence/8/summary)  |
+| 11998  | 7157  | R175H  | N/A  | [civic variant](http://civic.genome.wustl.edu/#/events/genes/7157/summary/variants/120/summary/evidence/408/summary)  |
 | 1316  | 238  | EML4-ALK  |   | [civic gene](http://civic.genome.wustl.edu/#/events/genes/238/summary)  |
 | CAPZA1  | 829  |   |   | _gene not found in civic_  |
 

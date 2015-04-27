@@ -71,7 +71,7 @@ def render(line,civic_variant,host,entrez_id_column):
 
   if (render_header):
     print("| {}  | {}  | {}  | {}  | {}  |\n"
-          "|---  |---  |---  |---  |---  |".format('hugo_symbol','entrez_gene_id','variant','drugs','link') )
+          "|---  |---  |---  |---  |---  |".format('hugo_symbol','entrez_gene_id','CIViC variant name','drugs','link') )
     render_header = False
   print(  "| {}  | {}  | {}  | {}  | {}  |".format(line[0],line[1],variant_name,drugs,link) )
 
@@ -94,6 +94,8 @@ def civic_properties(line,response,host,entrez_id_column):
       if evidence_item.get('variant_hgvs') == expected_hgvs:
         if(evidence_item.get('drugs')):
           drugs = ",".join(list(map(lambda e:e.get('name'), evidence_item.get('drugs'))))
+        if(evidence_item.get('drug')):
+          drugs = evidence_item.get('drug')
         url = "http://{}/#/events/genes/{}/summary/variants/{}/summary/evidence/{}/summary".format(host,entrez_id,variant.get('id'),evidence_item.get('id'))
         link = "[civic variant]({})".format(url)      
   return [variant_name,drugs,link]
@@ -124,10 +126,10 @@ def civic_lookup(entrez_id, host):
 if __name__ == '__main__':   
   civic.run()
   # for testing
-  #read("resources/AA8J.maf","civic.genome.wustl.edu",1)
+  # read("resources/simple.maf","-","civic.genome.wustl.edu",1)
 
 
-
+# WIP ..............................
 # 
 # http://grch37.ensembl.org/Homo_sapiens/Location/View?r=17:7578407-7578417
 # http://grch37.ensembl.org/Homo_sapiens/Location/View?r=11:9608371-9608371
