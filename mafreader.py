@@ -87,14 +87,14 @@ def civic_properties(line,response,host,entrez_id_column):
     link = "[civic gene](http://{}/#/events/genes/{}/summary)".format(host,entrez_id) 
   else:
     link = "_gene not found in civic_"
-  expected_hgvs = "{}:{}-{} ({}->{})".format(  line[4]  , line[5] ,line[6],line[11],line[12] )
+  expected_hgvs = "{}:{}-{} ({}->{})".format(  line[4]  , line[5] ,line[6],line[10],line[11] )
   for variant in response:
     variant_name = variant.get('name')
-    for evidence_item in variant.get('evidence_items'):      
+    for evidence_item in variant.get('evidence_items'):           
       if evidence_item.get('variant_hgvs') == expected_hgvs:
         if(evidence_item.get('drugs')):
           drugs = ",".join(list(map(lambda e:e.get('name'), evidence_item.get('drugs'))))
-        url = "http://" + host + "/#/events/genes/{}/summary/variants/{}/summary".format(entrez_id,evidence_item.get('id'))
+        url = "http://{}/#/events/genes/{}/summary/variants/{}/summary/evidence/{}/summary".format(host,entrez_id,variant.get('id'),evidence_item.get('id'))
         link = "[civic variant]({})".format(url)      
   return [variant_name,drugs,link]
 
