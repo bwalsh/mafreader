@@ -42,9 +42,9 @@ For local CIViC deployments use the -c option "-c locahost:3000"
 Issues
 ======
 
-mafreader calls CIViC for each variant in the MAF file.  An optimization would be to modify CIViC to accept a batch of entrez_ids to match on.
+- mafreader calls CIViC for each variant in the MAF file.  An optimization would be to modify CIViC to accept a batch of entrez_ids to match on.
 
-mafreader does not cache any reponses from CIViC.  An optimization would be for mafreader to cache responses and leverage the ETag header CIViC provides.
+- mafreader does not cache any reponses from CIViC.  An optimization would be for mafreader to cache responses and leverage the ETag header CIViC provides.
 
-mafreader does not populate CIViC with any information if it encounters a "no find".  
+- mafreader does not populate CIViC with any information if it encounters a "no find".  
 
